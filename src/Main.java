@@ -1,3 +1,4 @@
+import Utilities.GameJSONReader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,15 +11,17 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
+        GameJSONReader.getGameJSON();
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("listOfGamesView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Views/listOfGamesView.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.getIcons().add(callOfDutyLogo);
-        stage.setTitle("Call of Duty Game Database");
+        stage.setTitle("Call of Duty game Database");
         stage.show();
     }
 }
