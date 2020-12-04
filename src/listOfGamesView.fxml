@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ListOfGamesController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListOfGamesController">
+   <children>
+      <Label id="header" fx:id="headerLabel" layoutX="207.0" layoutY="26.0" prefHeight="17.0" prefWidth="186.0" text="Call of Duty Game Database" />
+      <Label layoutX="55.0" layoutY="59.0" text="Search for a specific game: " />
+      <TextField fx:id="searchTextField" layoutX="206.0" layoutY="55.0" prefHeight="25.0" prefWidth="153.0" promptText="Enter CoD Game Title" />
+      <Label fx:id="gamesFoundLabel" layoutX="55.0" layoutY="329.0" text="Games found: 16" />
+      <ListView fx:id="databaseListView" layoutX="55.0" layoutY="89.0" prefHeight="229.0" prefWidth="392.0" />
+      <Label layoutX="460.0" layoutY="174.0" prefHeight="52.0" prefWidth="118.0" text="Click on a game for more information" wrapText="true" />
+      <Button fx:id="gameInfoButton" layoutX="367.0" layoutY="55.0" mnemonicParsing="false" text="Get Game Info" />
+   </children>
 </AnchorPane>
