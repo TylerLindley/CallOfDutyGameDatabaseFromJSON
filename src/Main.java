@@ -6,11 +6,13 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import static Utilities.GameJSONReader.getGameJSON;
+
 public class Main extends Application {
     Image callOfDutyLogo = new Image("/images/callOfDutyLogo.jpg");
 
     public static void main(String[] args) {
-        GameJSONReader.getGameJSON();
+        getGameJSON();
         launch(args);
     }
 

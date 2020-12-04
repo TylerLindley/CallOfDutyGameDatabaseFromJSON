@@ -1,4 +1,4 @@
-package Models;
+/* package Models;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -22,7 +22,7 @@ public class Game {
      * @throws SQLException (In case of SQL Error)
      */
 
-    public Game(int gameID, String title, String publisher, LocalDate releaseDate, long grossRevenue, int rating) {
+    /* public Game(int gameID, String title, String publisher, LocalDate releaseDate, long grossRevenue, int rating) {
         setGameID(gameID);
         setTitle(title);
         setPublisher(publisher);
@@ -109,3 +109,4 @@ public class Game {
         }
     }
 }
+*/

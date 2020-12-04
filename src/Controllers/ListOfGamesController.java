@@ -11,6 +11,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ListOfGamesController implements Initializable {
@@ -25,7 +26,7 @@ public class ListOfGamesController implements Initializable {
     private Label gamesFoundLabel;
 
     @FXML
-    private ListView<GameJSONResponse> databaseListView;
+    private ListView<GameInfo> databaseListView;
 
     @FXML
     private Button gameInfoButton;
@@ -35,7 +36,8 @@ public class ListOfGamesController implements Initializable {
 
 
         try {
-            databaseListView.getItems().addAll(GameJSONReader.getGameJSON());
+            GameInfo[] allGames = GameJSONReader.getGameJSON().getGames();
+            databaseListView.getItems().addAll(allGames);
         }
         catch (Exception e) {
             e.printStackTrace();

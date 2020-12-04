@@ -67,4 +67,8 @@ public class GameInfo {
     public void setRating(int rating) {
         this.rating = rating;
     }
+
+    public String toString() {
+        return getTitle();
+    }
 }
