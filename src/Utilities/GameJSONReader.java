@@ -17,7 +17,6 @@ public class GameJSONReader {
         {
             Gson gson = new Gson();
             gameResponse = gson.fromJson(jsonReader, GameJSONResponse.class);
-            System.out.println();
         }
         catch(Exception e) {
             e.printStackTrace();

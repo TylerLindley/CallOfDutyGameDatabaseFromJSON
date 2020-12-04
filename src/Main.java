@@ -10,9 +10,8 @@ public class Main extends Application {
     Image callOfDutyLogo = new Image("/images/callOfDutyLogo.jpg");
 
     public static void main(String[] args) {
-        launch(args);
-
         GameJSONReader.getGameJSON();
+        launch(args);
     }
 
     @Override
