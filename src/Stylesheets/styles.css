@@ -1,0 +1,24 @@
+/* .root {
+    -fx-font-size: 12 px;
+    -fx-background-image: url("/images/callOfDutyLogo.png");
+    -fx-background-image-pos: top;
+    -fx-background-size: 625px;
+} */
+.root {
+    -fx-font-size: 12 px;
+    -fx-background-color: D3D8DC;
+}
+
+.button {
+    -fx-background-color: orange;
+}
+
+#header
+{
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+}
+
+.list-view {
+    -fx-opacity: 0.9;
+}

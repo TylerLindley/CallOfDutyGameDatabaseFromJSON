@@ -1,3 +1,4 @@
+import JSON.GameInfo;
 import Utilities.GameJSONReader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

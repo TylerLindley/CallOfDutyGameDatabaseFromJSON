@@ -6,15 +6,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListOfGamesController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListOfGamesController">
    <children>
-      <Label id="header" fx:id="headerLabel" layoutX="207.0" layoutY="26.0" prefHeight="17.0" prefWidth="186.0" text="Call of Duty Game Database" />
+      <Label id="header" fx:id="headerLabel" layoutX="63.0" layoutY="-7.0" prefHeight="80.0" prefWidth="559.0" text="Call of Duty Game Database" />
       <Label layoutX="55.0" layoutY="59.0" text="Search for a specific game: " />
-      <TextField fx:id="searchTextField" layoutX="206.0" layoutY="55.0" prefHeight="25.0" prefWidth="153.0" promptText="Enter CoD Game Title" />
-      <Label fx:id="gamesFoundLabel" layoutX="55.0" layoutY="329.0" text="Games found: 16" />
-      <ListView fx:id="databaseListView" layoutX="55.0" layoutY="89.0" prefHeight="229.0" prefWidth="392.0" />
-      <Label layoutX="460.0" layoutY="174.0" prefHeight="52.0" prefWidth="118.0" text="Click on a game for more information" wrapText="true" />
-      <Button fx:id="gameInfoButton" layoutX="367.0" layoutY="55.0" mnemonicParsing="false" text="Get Game Info" />
+      <TextField fx:id="searchTextField" layoutX="206.0" layoutY="55.0" prefHeight="25.0" prefWidth="222.0" promptText="Enter CoD Game Title" />
+      <Label fx:id="gamesFoundLabel" layoutX="497.0" layoutY="116.0" text="Games found: 17" />
+      <ListView fx:id="databaseListView" layoutX="57.0" layoutY="90.0" prefHeight="166.0" prefWidth="434.0" />
+      <Label fx:id="informationLabel" layoutX="63.0" layoutY="279.0" prefHeight="52.0" prefWidth="440.0" text="Click on a game for more information" wrapText="true" />
+      <Button fx:id="gameInfoButton" layoutX="437.0" layoutY="55.0" mnemonicParsing="false" onAction="#viewGameInformation" text="Get Game Info" />
    </children>
 </AnchorPane>
