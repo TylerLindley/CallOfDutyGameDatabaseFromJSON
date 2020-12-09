@@ -2,10 +2,6 @@ package JSON;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.Period;
-
 public class GameInfo {
     @SerializedName("Title")
     private String title;
@@ -17,20 +13,12 @@ public class GameInfo {
     private String releaseDate;
 
     @SerializedName("GrossRevenue")
-    private BigDecimal grossRevenue;
+    private long grossRevenue;
 
     @SerializedName("Rating")
     private int rating;
 
-    public GameInfo(String title, String publisher, String releaseDate, BigDecimal grossRevenue, int rating) {
-        setTitle(title);
-        setPublisher(publisher);
-        setReleaseDate(releaseDate);
-        setGrossRevenue(grossRevenue);
-        setRating(rating);
-    }
-
-    public void validateVariables() {
+    public GameInfo(String title, String publisher, String releaseDate, long grossRevenue, int rating) {
         setTitle(title);
         setPublisher(publisher);
         setReleaseDate(releaseDate);
@@ -70,24 +58,25 @@ public class GameInfo {
     }
 
     public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-        //if (releaseDate.isAfter(LocalDate.now()))
-          //  throw new IllegalArgumentException("releaseDate cannot be in the future");
-        //if (Period.between(LocalDate.now(), releaseDate).getYears()>25)
-          //  throw new IllegalArgumentException("Invalid release date. The first Call of Duty was released in 2003.");
+        if(releaseDate.startsWith("1")) {
+            throw new IllegalArgumentException("Call of Duty was not released until 2003");
+        }
+        else {
+            this.releaseDate = releaseDate;
+        }
     }
 
-    public BigDecimal getGrossRevenue() {
+    public long getGrossRevenue() {
         return grossRevenue;
     }
 
-    public void setGrossRevenue(BigDecimal grossRevenue) {
-        //if(grossRevenue >=.00) {
+    public void setGrossRevenue(long grossRevenue) {
+        if(grossRevenue >=0) {
             this.grossRevenue = grossRevenue;
-        //}
-        //else {
-          //  throw new IllegalArgumentException("Revenue must be greater than or equal to 0.");
-        //}
+        }
+        else {
+            throw new IllegalArgumentException("Revenue must be greater than or equal to 0.");
+        }
     }
 
     public int getRating() {
@@ -104,13 +93,6 @@ public class GameInfo {
     }
 
     public String toString() {
-        return getTitle();
-    }
-
-    public boolean contains(String searchString)
-    {
-        searchString = searchString.toLowerCase();
-
-        return title.toLowerCase().contains(searchString);
+            return getTitle();
     }
 }

@@ -2,121 +2,128 @@
   "Games": [{
     "Title": "Call of Duty",
     "Publisher": "Infinity Ward",
-    "ReleaseDate": "2003-10-29",
-    "GrossRevenue": 168606594.94,
+    "ReleaseDate": "October 29th 2003",
+    "GrossRevenue": 168606594,
     "Rating": 8
   },
     {
       "Title": "Call of Duty: Finest Hour",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2004-11-16",
-      "GrossRevenue": 180000000.00,
+      "ReleaseDate": "November 16th 2004",
+      "GrossRevenue": 180000000,
       "Rating": 7
     },
     {
       "Title": "Call of Duty 2",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2005-10-25",
-      "GrossRevenue": 224810125.58,
+      "ReleaseDate": "October 25th 2005",
+      "GrossRevenue": 224810125,
       "Rating": 10
     },
     {
       "Title": "Call of Duty 3",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2006-11-07",
-      "GrossRevenue": 266025316.46,
+      "ReleaseDate": "November 7th 2006",
+      "GrossRevenue": 266025316,
       "Rating": 9
     },
     {
       "Title": "Call of Duty 4",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2007-11-05",
-      "GrossRevenue": 716000000.00,
+      "ReleaseDate": "November 5th 2007",
+      "GrossRevenue": 716000000,
       "Rating": 10
     },
     {
       "Title": "Call of Duty: World at War",
       "Publisher": "Treyarch",
-      "ReleaseDate": "2008-11-11",
-      "GrossRevenue": 628000000.00,
+      "ReleaseDate": "November 11th 2008",
+      "GrossRevenue": 628000000,
       "Rating": 10
     },
     {
       "Title": "Call of Duty: Modern Warfare 2",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2009-11-10",
-      "GrossRevenue": 1080000000.00,
+      "ReleaseDate": "November 10th 2009",
+      "GrossRevenue": 1080000000,
       "Rating": 10
     },
     {
       "Title": "Call of Duty: Black Ops",
       "Publisher": "Treyarch",
-      "ReleaseDate": "2010-11-09",
-      "GrossRevenue": 1220000000.00,
+      "ReleaseDate": "November 9th 2010",
+      "GrossRevenue": 1220000000,
       "Rating": 9
     },
     {
       "Title": "Call of Duty: Modern Warfare 3",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2011-11-08",
-      "GrossRevenue": 1228000000.00,
+      "ReleaseDate": "November 8th 2011",
+      "GrossRevenue": 1228000000,
       "Rating": 8
     },
     {
       "Title": "Call of Duty: Black Ops 2",
       "Publisher": "Treyarch",
-      "ReleaseDate": "2012-11-12",
-      "GrossRevenue": 1176000000.00,
+      "ReleaseDate": "November 12th 2012",
+      "GrossRevenue": 1176000000,
       "Rating": 10
     },
     {
       "Title": "Call of Duty: Ghosts",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2013-11-05",
-      "GrossRevenue": 1080000000.00,
+      "ReleaseDate": "November 5th 2013",
+      "GrossRevenue": 1080000000,
       "Rating": 8
     },
     {
       "Title": "Call of Duty: Advanced Warfare",
       "Publisher": "Sledgehammer Games",
-      "ReleaseDate": "2014-11-04",
-      "GrossRevenue": 840000000.00,
+      "ReleaseDate": "November 4th 2014",
+      "GrossRevenue": 840000000,
       "Rating": 8
     },
     {
       "Title": "Call of Duty: Black Ops 3",
       "Publisher": "Treyarch",
-      "ReleaseDate": "2015-11-06",
-      "GrossRevenue": 1336000000.00,
+      "ReleaseDate": "November 6th 2015",
+      "GrossRevenue": 1336000000,
       "Rating": 9
     },
     {
       "Title": "Call of Duty: Infinite Warfare",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2016-11-04",
-      "GrossRevenue": 1000000000.00,
+      "ReleaseDate": "November 04th 2016",
+      "GrossRevenue": 1000000000,
       "Rating": 8
     },
     {
       "Title": "Call of Duty: WW2",
       "Publisher": "Sledgehammer Games",
-      "ReleaseDate": "2017-11-03",
-      "GrossRevenue": 804000000.00,
+      "ReleaseDate": "November 3rd 2017",
+      "GrossRevenue": 804000000,
       "Rating": 7
     },
     {
       "Title": "Call of Duty: Black Ops 4",
       "Publisher": "Treyarch",
-      "ReleaseDate": "2018-10-12",
-      "GrossRevenue": 1300000000.00,
+      "ReleaseDate": "October 12th 2018",
+      "GrossRevenue": 1300000000,
       "Rating": 9
     },
     {
       "Title": "Call of Duty: Modern Warfare",
       "Publisher": "Infinity Ward",
-      "ReleaseDate": "2019-09-12",
-      "GrossRevenue": 1620000000.00,
+      "ReleaseDate": "September 12th 2019",
+      "GrossRevenue": 1620000000,
       "Rating": 10
+    },
+    {
+      "Title": "Call of Duty: Black Ops Cold War",
+      "Publisher": "Treyarch",
+      "ReleaseDate": "November 10th 2020",
+      "GrossRevenue" : 100000000,
+      "Rating": 8
     }
   ]
 }

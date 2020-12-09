@@ -47,7 +47,7 @@ public class ListOfGamesController implements Initializable {
     @FXML
     private void viewGameInformation(ActionEvent event) throws IOException {
         if(databaseListView.getSelectionModel().isEmpty()) {
-                Utilities.SceneChanger.changeScene(event, "/Views/gameInformationView.fxml", "");
+                Utilities.SceneChanger.changeScene(event, "/Views/gameInformationView.fxml", "Detailed Information: No Game Selected");
 
         }
         else {
@@ -62,6 +62,7 @@ public class ListOfGamesController implements Initializable {
             controller.initData(databaseListView.getSelectionModel().getSelectedItem());
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(gameInformationScene);
+            window.setTitle("Detailed Information: " + databaseListView.getSelectionModel().getSelectedItem());
             window.show();
         }
     }
