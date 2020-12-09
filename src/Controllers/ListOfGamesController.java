@@ -6,10 +6,15 @@ import Utilities.SceneChanger;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -39,6 +44,28 @@ public class ListOfGamesController implements Initializable {
 
     private ArrayList<GameInfo> allGames;
 
+    @FXML
+    private void viewGameInformation(ActionEvent event) throws IOException {
+        if(databaseListView.getSelectionModel().isEmpty()) {
+                Utilities.SceneChanger.changeScene(event, "/Views/gameInformationView.fxml", "");
+
+        }
+        else {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/Views/gameInformationView.fxml"));
+            Parent gameInformationParent = loader.load();
+
+            Scene gameInformationScene = new Scene(gameInformationParent);
+
+            //access the controller and game the method.
+            GameInformationController controller = loader.getController();
+            controller.initData(databaseListView.getSelectionModel().getSelectedItem());
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(gameInformationScene);
+            window.show();
+        }
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -59,39 +86,14 @@ public class ListOfGamesController implements Initializable {
                         searchTextField.setText(newGame.toString());
                     }
                 });
-
-        /* //Configure the TextField with a listener to filter
-        //the TableView
-        searchTextField.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue,
-                                String oldString, String searchString) {
-                //The big goal is to filter the TableView to only hold Student objects
-                //that contain the search String
-                ArrayList<GameInfo> filtered = new ArrayList<>();
-
-                //loop over the students and check if they contain the search string
-                for (GameInfo game : allGames)
-                {
-                    if (game.contains(searchString))
-                        filtered.add(game);
-                }
-
-                //update the TableView with the filtered list
-                databaseListView.getItems().clear();
-                databaseListView.getItems().addAll(filtered);
-            }
-        }); */
     }
+
     private void updateLabels() {
         gamesFoundLabel.setText("Rows Returned: " + databaseListView.getItems().size());
         databaseListView.refresh();
     }
+
     private void textFieldContent() {
-    //    searchTextField.setText("Call of Duty");
     }
-    @FXML
-    private void viewGameInformation(ActionEvent event) throws IOException {
-        SceneChanger.changeScene(event, "gameInformationView.fxml", "Current Cod game");
-    }
+
 }

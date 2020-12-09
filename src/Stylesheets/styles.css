@@ -22,3 +22,7 @@
 .list-view {
     -fx-opacity: 0.9;
 }
+
+#gameInfo {
+    -fx-font-size: 30px;
+}

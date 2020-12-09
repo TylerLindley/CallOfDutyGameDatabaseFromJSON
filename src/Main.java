@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import static Utilities.GameJSONReader.getGameJSON;
 
 public class Main extends Application {
-    Image callOfDutyLogo = new Image("/images/callOfDutyLogo.jpg");
+    Image callOfDutyLogo = new Image("/images/CoDLogo.jfif");
 
     public static void main(String[] args) {
         getGameJSON();
@@ -23,7 +23,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.getIcons().add(callOfDutyLogo);
-        stage.setTitle("Call of Duty game Database");
+        stage.setTitle("Call of Duty: Game Database");
         stage.show();
     }
 }

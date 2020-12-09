@@ -5,15 +5,22 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListOfGamesController">
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListOfGamesController">
    <children>
       <Label id="header" fx:id="headerLabel" layoutX="63.0" layoutY="-7.0" prefHeight="80.0" prefWidth="559.0" text="Call of Duty Game Database" />
-      <Label layoutX="55.0" layoutY="59.0" text="Search for a specific game: " />
-      <TextField fx:id="searchTextField" layoutX="206.0" layoutY="55.0" prefHeight="25.0" prefWidth="222.0" promptText="Enter CoD Game Title" />
+      <Label id="subheading" layoutX="54.0" layoutY="49.0" prefHeight="37.0" prefWidth="159.0" text="Search for a specific game: ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="searchTextField" layoutX="206.0" layoutY="55.0" prefHeight="25.0" prefWidth="222.0" promptText="Enter Call of Duty Game Title" />
       <Label fx:id="gamesFoundLabel" layoutX="497.0" layoutY="116.0" text="Games found: 17" />
       <ListView fx:id="databaseListView" layoutX="57.0" layoutY="90.0" prefHeight="166.0" prefWidth="434.0" />
-      <Label fx:id="informationLabel" layoutX="63.0" layoutY="279.0" prefHeight="52.0" prefWidth="440.0" text="Click on a game for more information" wrapText="true" />
+      <Label fx:id="informationLabel" layoutX="54.0" layoutY="280.0" prefHeight="80.0" prefWidth="440.0" text="Search the Call of Duty Game Database for a specific game you'd like to know more information about, then click our &quot;Game Info&quot; button to get more indepth information about that specific game." wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <Button fx:id="gameInfoButton" layoutX="437.0" layoutY="55.0" mnemonicParsing="false" onAction="#viewGameInformation" text="Get Game Info" />
    </children>
 </AnchorPane>
