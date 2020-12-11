@@ -1,17 +1,17 @@
 package Utilities;
 
-import JSON.GameJSONResponse;
+import Models.GameJSONResponse;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class GameJSONReader {
 
+    /**
+     * This method will search through the JSON file (GameJSONResponse) and read through the data
+     * and allow me to use this data for my call of duty game database.
+     */
     public static GameJSONResponse getGameJSON() {
         GameJSONResponse gameResponse = null;
         try(

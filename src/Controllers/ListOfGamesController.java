@@ -1,10 +1,7 @@
 package Controllers;
 
-import JSON.GameInfo;
+import Models.GameInfo;
 import Utilities.GameJSONReader;
-import Utilities.SceneChanger;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,7 +16,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class ListOfGamesController implements Initializable {
@@ -44,6 +40,12 @@ public class ListOfGamesController implements Initializable {
 
     private ArrayList<GameInfo> allGames;
 
+    /**
+     * This method will change the scene to the game information view (if a game is selected (displays more in-depth information about a call of duty game))
+     * other wise it will switch to the scene and let the user know to go back to the previous menu and select a game.
+     * @param event
+     * @throws IOException
+     */
     @FXML
     private void viewGameInformation(ActionEvent event) throws IOException {
         if(databaseListView.getSelectionModel().isEmpty()) {
@@ -57,7 +59,7 @@ public class ListOfGamesController implements Initializable {
 
             Scene gameInformationScene = new Scene(gameInformationParent);
 
-            //access the controller and game the method.
+            //access the controller and get useable methods.
             GameInformationController controller = loader.getController();
             controller.initData(databaseListView.getSelectionModel().getSelectedItem());
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -67,6 +69,13 @@ public class ListOfGamesController implements Initializable {
         }
     }
 
+    /**
+     * this method trys to read all the games from the JSON file into the list view
+     * if successful it will update labels and display them
+     * if unsuccessful it will print the stack trace.
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -75,7 +84,6 @@ public class ListOfGamesController implements Initializable {
             GameInfo[] allGames = GameJSONReader.getGameJSON().getGames();
             databaseListView.getItems().addAll(allGames);
             updateLabels();
-            textFieldContent();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -89,12 +97,12 @@ public class ListOfGamesController implements Initializable {
                 });
     }
 
+    /**
+     * this method will update the labels on screen to display the correct number of games in the database.
+     * and refrew the list view.
+     */
     private void updateLabels() {
         gamesFoundLabel.setText("Rows Returned: " + databaseListView.getItems().size());
         databaseListView.refresh();
     }
-
-    private void textFieldContent() {
-    }
-
 }

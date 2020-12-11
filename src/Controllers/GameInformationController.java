@@ -1,6 +1,6 @@
 package Controllers;
 
-import JSON.GameInfo;
+import Models.GameInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -37,8 +37,11 @@ public class GameInformationController implements Initializable {
     @FXML
     private Button backButton;
 
-    Image callOfDutyLogo = new Image("/images/CoDLogo.jfif");
-
+    /**
+     * This method initializes data when the user switches to this scene from the ListOfGamesView (if a game is selected)
+     * and sets the text of all the labels on the screen to match the selectedGame
+     * @param game
+     */
     public void initData(GameInfo game) {
         if(game.getTitle().contains("Call of Duty")) {
             selectedGame = game;
@@ -55,6 +58,11 @@ public class GameInformationController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
+    /**
+     * This method allows the user to switch scenes using the SceneChanger class I've created.
+     * @param event
+     * @throws IOException
+     */
     @FXML
     private void viewListOfGames(ActionEvent event) throws IOException {
         Utilities.SceneChanger.changeScene(event, "/Views/listOfGamesView.fxml", "List of Games");
